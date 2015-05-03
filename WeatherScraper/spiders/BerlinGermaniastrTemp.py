@@ -15,5 +15,5 @@ class BerlinGermaniastrTemp(scrapy.Spider):
     def parse(self, response):
         soup = BeautifulSoup(response.body)
         temp = self.get_temp(soup)
-        with open(name + "_temp", "w") as f:
+        with open(self.name + "_temp", "w") as f:
             f.write(temp)
