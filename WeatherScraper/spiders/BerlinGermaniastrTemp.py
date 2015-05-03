@@ -3,7 +3,7 @@ import scrapy
 from bs4 import BeautifulSoup
 
 class BerlinGermaniastrTemp(scrapy.Spider):
-    name = "berlin_forecast"
+    name = "berlin_germaniastr"
     allowed_domains = ["wunderground.com"]
     start_urls = ["http://www.wunderground.com/personal-weather-station/dashboard?ID=IBERLIN725#history"]
 
@@ -13,7 +13,7 @@ class BerlinGermaniastrTemp(scrapy.Spider):
 
 
     def parse(self, response):
-
         soup = BeautifulSoup(response.body)
-        with open("test.html", "w") as f:
-            f.write(response.body)
+        temp = self.get_temp(soup)
+        with open(name + "_temp", "w") as f:
+            f.write(temp)
