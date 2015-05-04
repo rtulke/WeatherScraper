@@ -1,2 +1,2 @@
-crapy==0.24.6
-BeautifulSoup==3.2.1
+Scrapy==0.24.6
+beautifulsoup4==4.3.2
