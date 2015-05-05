@@ -12,7 +12,7 @@ BOT_NAME = 'WeatherScraper'
 
 SPIDER_MODULES = ['WeatherScraper.spiders']
 NEWSPIDER_MODULE = 'WeatherScraper.spiders'
-LOG_LEVEL = "ERROR"
+LOG_LEVEL = "CRITICAL"
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'WeatherScraper (+http://www.yourdomain.com)'
